@@ -10,7 +10,6 @@ const AdminDashboard = () => {
     useEffect(() => {
         fetchStats();
     }, []);
-
     const fetchStats = async () => {
         try {
             const res = await api.get('/admin/stats');
@@ -21,7 +20,6 @@ const AdminDashboard = () => {
             setLoading(false);
         }
     };
-
     if (loading) return <div className="loader">Analyzing Platform Metrics...</div>;
 
     const cards = [
