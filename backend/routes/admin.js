@@ -9,7 +9,6 @@ router.get('/stats', authenticateToken, isAdmin, async (req, res) => {
         const totalUsers = await User.count();
         const totalProblems = await Problem.count();
         const totalSubmissions = await Submission.count();
-        
         // Submissions by status
         const stats = await Submission.findAll({
             attributes: [
@@ -18,7 +17,6 @@ router.get('/stats', authenticateToken, isAdmin, async (req, res) => {
             ],
             group: ['status']
         });
-
         // Recent Submissions
         const recentSubmissions = await Submission.findAll({
             limit: 5,
