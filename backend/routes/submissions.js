@@ -17,7 +17,7 @@ router.post('/submit', authenticateToken, async (req, res) => {
         const user_id = req.user.id;
         const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
-        // Log helper
+        // Log helper   
         const log = (msg) => {
             if (req.io) req.io.to(`user_${user_id}`).emit('execution_log', { message: msg, time: new Date().toLocaleTimeString() });
         };
@@ -25,7 +25,6 @@ router.post('/submit', authenticateToken, async (req, res) => {
         // Emit that execution has started
         log('🚀 Initializing Build Environment...');
         await delay(500);
-
         // Fetch problem details for sample testing
         const problem = await Problem.findByPk(problem_id, {
             attributes: ['title', 'sample_input', 'sample_output']
