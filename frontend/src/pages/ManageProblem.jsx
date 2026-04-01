@@ -49,6 +49,7 @@ const ManageProblem = () => {
             setLoading(false);
         }
     };
+
     return (
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
             <button onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', background: 'none', border: 'none', cursor: 'pointer', marginBottom: '20px' }}>
@@ -113,4 +114,3 @@ const ManageProblem = () => {
 };
 
 export default ManageProblem;
-
