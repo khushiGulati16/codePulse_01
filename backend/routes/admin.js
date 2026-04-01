@@ -26,7 +26,6 @@ router.get('/stats', authenticateToken, isAdmin, async (req, res) => {
                 { model: Problem, as: 'problem', attributes: ['title'] }
             ]
         });
-
         res.json({
             users: totalUsers,
             problems: totalProblems,
@@ -38,7 +37,6 @@ router.get('/stats', authenticateToken, isAdmin, async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
 // Admin problem creation
 router.post('/problems', authenticateToken, isAdmin, async (req, res) => {
     try {
