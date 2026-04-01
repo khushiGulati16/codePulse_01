@@ -75,4 +75,4 @@ Your course plan (CE-01) requires specific technologies. Here is how CodePulse m
 1. Configure `.env` with your MySQL credentials.
 2. **Backend**: `cd backend && npm install && npm run dev`
 3. **Frontend**: `cd frontend && npm install && npm run dev`
-4. **Seeding**: Use `node seed.js` for users and `node extended_seed.js` for problems.
+4. **Seeding**: Inside `backend/`, run `node seed.js` for users and `node extended_seed.js` for problems.
