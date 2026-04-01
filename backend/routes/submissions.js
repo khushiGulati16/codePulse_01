@@ -31,11 +31,9 @@ router.post('/submit', authenticateToken, async (req, res) => {
         });
         
         if (!problem) return res.status(404).json({ message: "Problem not found" });
-
         const language_id = LANGUAGE_MAP[language] || 71;
         log(`🔍 Loading problem context: ${problem.title}`);
         await delay(300);
-
         let resultOutput, resultStatus, resultStdout, resultStderr;
 
         if (!process.env.JUDGE0_API_KEY) {
