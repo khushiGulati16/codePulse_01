@@ -1,0 +1,13 @@
+{
+    "java.import.exclusions": [
+        "**/node_modules/**",
+        "**/.git/**",
+        "backend/tmp_exec/**"
+    ],
+    "java.project.resourceFilters": [
+        "node_modules",
+        ".git",
+        "backend/tmp_exec"
+    ],
+    "java.format.enabled": true
+}
