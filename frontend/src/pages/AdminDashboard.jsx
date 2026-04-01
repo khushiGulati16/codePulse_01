@@ -21,7 +21,6 @@ const AdminDashboard = () => {
         }
     };
     if (loading) return <div className="loader">Analyzing Platform Metrics...</div>;
-
     const cards = [
         { title: 'Total Users', value: stats.users, icon: <Users size={24} color="#6366f1" />, bg: 'rgba(99, 102, 241, 0.1)' },
         { title: 'Challenges', value: stats.problems, icon: <Database size={24} color="#f59e0b" />, bg: 'rgba(245, 158, 11, 0.1)' },
