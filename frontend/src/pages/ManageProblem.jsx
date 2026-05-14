@@ -17,6 +17,7 @@ const ManageProblem = () => {
         sample_output: ''
     });
     const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         if (id) {
             // Fetch problem to edit
@@ -25,6 +26,7 @@ const ManageProblem = () => {
                 .catch(() => toast.error('Failed to load challenge details.'));
         }
     }, [id]);
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
